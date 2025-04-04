@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+}
+
+.button {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+
+    background-color: #8D1010;
+
+    border: 3px solid #8D1010;
+    border-radius: 50px;
+    
+    height: 100px;
+    width: 300px;   
+
+    cursor: pointer;
+
+    z-index: 3;
+}
+
+.button .buttonText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: #FFF;
+    
+    color: #8D1010;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    border-radius: 50px;
+
+    height: 100%;
+    width:  100%;
+
+    z-index: 1;
+
+    transition: box-shadow 0.5s;
+
+    
+    animation-name: moveBackButtonText;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.button:hover {
+    box-shadow: 5px 5px 25px rgba(141, 16, 16, 0.8);
+}
+
+.button:hover .buttonText{
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+
+    animation-name: moveButtonText;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveButtonText {
+    from {
+        transform: translateX(0) scale(1);
+    }
+    to {
+        transform: translateX(-250px) scale(0.95);
+    }
+}
+
+@keyframes moveBackButtonText {
+    from {
+        transform: translateX(-250px) scale(0.95);
+    }to {
+        transform: translateX(0) scale(1);
+    }
+    
+}
+
+.button .buttonContacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: #8D1010;
+    
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    border-radius: 50px;
+
+    height: 100%;
+    width: 100%;
+
+    z-index: 0;
+
+    animation-name: moveBackButtonContacts;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .buttonContacts{
+    animation-name: moveButtonContacts;
+    animation-duration: 0.75s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveButtonContacts {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveBackButtonContacts {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }to {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    
+}
+
+.buttonContacts a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FFF;
+
+    text-decoration: none;
+    color: #8D1010;
+    font-size: 30px;
+
+    margin: 10px;
+    border-radius: 50%;
+
+    height: 50px;
+    width: 50px;
+
+    transition: 0.3s;
+}
+
+.buttonContacts a:hover {
+    scale: 1.1;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
