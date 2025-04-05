@@ -1,0 +1,102 @@
+/*Estlos padrão da página*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 200vh;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-top: 20px;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border: 5px solid #000;
+    border-radius: 20px;
+    margin: 20px;
+
+    height: 150px;
+    width: 1000px;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+
+    padding: 10px;
+    border: 5px solid #000;
+    border-radius: 20px;
+
+    height: 100px;
+    width: 300px;
+}
+
+span:nth-child(1) {
+    background-color: #F53376;
+}
+
+span:nth-child(2) {
+    background-color: #33CDF5;
+}
+
+span:nth-child(3) {
+    background-color: #F4E333;
+}
+
+/*Posição Relativa a sua POSIÇÃO ORIGINAL com 50px da parte inferior e do lado direito.*/
+.relativeChild1 {
+    position: relative;
+    bottom: 50px;
+    right: 50px;
+}
+
+/*Posição Absoluta na TELA, a 475px da parte superior e 1100px do lado esquerdo.*/
+.absoluteStatic .absoluteChild2 {
+    position: absolute;
+    top: 475px;
+    left: 1100px;
+}
+
+
+/*Posição Absoluta em relação ao PAI, a 1px da parte inferior e do lado esquerdo.*/
+.absoluteRelative {
+    position: relative;
+}
+.absoluteRelative .absoluteChild3 {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+}
+
+/*Todo o conteiner está fixo na TELA, a 10px da parte inferior e do lado direito.*/
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/*Todo o container fica fixo quando chega a 35% do topo da página.*/
+.sticky {
+    position: sticky;
+    top: 35%;
+    z-index: -1;
+}

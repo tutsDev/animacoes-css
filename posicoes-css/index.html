@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posições-CSS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <p>Static Container</p>
+    <div class="static">
+        <span class="staticChild1">1</span>
+        <span class="staticChild2">2</span>
+        <span class="staticChild3">3</span>
+    </div>
+    
+    <p>Relative Container</p>
+    <div class="relative">
+        <span class="relativeChild1">Posição Relativa a sua POSIÇÃO ORIGINAL com 50px da parte inferior e do lado direito.</span>
+        <span class="relativeChild2">2</span>
+        <span class="relativeChild3">3</span>
+    </div>
+
+    <p>Absolute Container - Static</p>
+    <div class="absoluteStatic">
+        <span class="absoluteChild1">1</span>
+        <span class="absoluteChild2">Posição Absoluta na TELA, a 475px da parte superior e 1100px do lado esquerdo.</span>
+        <span class="absoluteChild3">3</span>
+    </div>
+
+    <p>Absolute Container - Relative</p>
+    <div class="absoluteRelative">
+        <span class="absoluteChild1">1</span>
+        <span class="absoluteChild2">2</span>
+        <span class="absoluteChild3">Posição Absoluta em relação ao PAI, a 1px da parte inferior e do lado esquerdo.</span>
+    </div>
+
+    <div class="fixed">
+        <span class="fixedChild1">Fixed Container</span>
+        <span class="fixedChild2">Todo o conteiner está fixo,</span>
+        <span class="fixedChild3">a 10px da parte inferior e do lado direito.</span>
+    </div>
+
+    <div class="sticky">
+        <span class="stickyChild1">Sticky Container</span>
+        <span class="stickyChild2">Todo o container fica fixo</span>
+        <span class="stickyChild3">quando chega a 35% do topo da tela.</span>
+    </div>
+</body>
+</html>
