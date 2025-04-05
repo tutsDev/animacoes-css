@@ -1,2 +1,2 @@
-# animacoes-css
- Aprendendo e brincando com animações utilizando CSS puro.
+# explorando-css
+ Aprendendo e brincando com CSS puro.
